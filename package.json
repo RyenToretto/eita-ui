@@ -1,0 +1,27 @@
+{
+  "name": "wonder-lib-workspace",
+  "version": "1.0.0",
+  "description": "Wonder UI Library for Nuxt 4 - A comprehensive component library with auto-import support",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --filter wonder-demo dev",
+    "demo": "pnpm --filter wonder-demo dev",
+    "lib:build": "pnpm --filter wonder-lib build",
+    "lib:dev": "pnpm --filter wonder-lib dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check",
+    "release": "pnpm lib:build && pnpm --filter wonder-lib publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

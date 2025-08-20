@@ -1,0 +1,87 @@
+{
+  "name": "wonder-lib",
+  "version": "1.0.0",
+  "description": "A comprehensive UI component library for Nuxt 4 with auto-import support",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./nuxt": {
+      "import": "./dist/nuxt.mjs",
+      "types": "./dist/nuxt.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.mjs",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./composables": {
+      "import": "./dist/composables/index.mjs",
+      "types": "./dist/composables/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.mjs",
+      "types": "./dist/utils/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "nuxt.js",
+    "nuxt.d.ts"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "type-check": "vue-tsc --noEmit",
+    "prepublishOnly": "pnpm build",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish",
+    "release": "pnpm build && pnpm publish:patch"
+  },
+  "keywords": [
+    "vue",
+    "nuxt",
+    "nuxt4",
+    "ui",
+    "components",
+    "library",
+    "typescript",
+    "auto-import"
+  ],
+  "author": "Wonder Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/wonder-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/wonder-lib/issues"
+  },
+  "homepage": "https://github.com/your-org/wonder-lib#readme",
+  "peerDependencies": {
+    "@nuxt/kit": "^3.8.0",
+    "@vueuse/core": "^10.0.0",
+    "nuxt": "^3.8.0",
+    "vue": "^3.3.0"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.13.0",
+    "defu": "^6.1.4"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.2.0",
+    "@types/node": "^20.10.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.0",
+    "unbuild": "^2.0.0",
+    "vue": "^3.4.0",
+    "vue-tsc": "^1.8.25"
+  }
+}

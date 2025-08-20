@@ -1,0 +1,55 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Build
+dist/
+dist-ssr/
+.out/
+.nuxt/
+.build/
+.cache/
+*.local
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Mac / System
+.DS_Store
+Thumbs.db
+
+# Typescript
+*.tsbuildinfo
+
+# Coverage / Tests
+coverage/
+*.lcov
+
+# Lock files (可选，看团队规范)
+.history
+
+# Library specific
+# 如果组件库要发布到 npm，最好忽略打包产物，只保留 src
+# 除非你希望产物直接托管
+lib/
+es/
